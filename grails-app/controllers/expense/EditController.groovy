@@ -5,7 +5,7 @@ class EditController {
     def edit1() {
         println ("got in edit1")
         println session.foo
-        [editData:Person1.session.foo]
+        
     }
     def update() {
         Person1 myperson = Person1.get(params.id)

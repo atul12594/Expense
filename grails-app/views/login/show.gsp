@@ -22,10 +22,42 @@
     <asset:stylesheet src = "bootstrap.min.css"/>
     <asset:javascript src = "bootstrap.min.js"/>
     <asset:javascript src ="jquery.min.js"/>
+    <style>
+    .box1 {
+        border:1px solid black ;
+        width: 60%;
+        margin: auto;
+        padding: 4%;
+        background-color:#337ab7;
+        border-radius: 20px;
+    }
+    </style>
 </head>
 
 <body>
     <div class="container">
+        <div class="container">
+            <nav class = "navbar navbar-inverse">
+                <div class = "container-fluid">
+                    <div class = "navbar-header">
+                        <button type = "button" class = "navbar-toggle collapsed " data-toggle="collapse" data-target = "#navbar-collapse3">
+                            <span class = "sr-only">Toggle navigation</span>
+                            <span class = "icon-bar"></span>
+                            <span class = "icon-bar"></span>
+                            <span class = "icon-bar"></span>
+                        </button>
+                    </div>
+                    <a class="navbar-brand " id= "a1" href="#"><i class="fa fa-book">Brand</i></a>
+                    <div class="collapse navbar-collapse " id="navbar-collapse3">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li ><a href="/edit/edit1" id = "a2">Edit</a></li>
+                            <li><a href="#" id="a3">Logout</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         <div class="box1">
             <g:form name="login" controller="login" action="test" class="form-horizontal">
                 <div class = "form-group form-group-lg ">

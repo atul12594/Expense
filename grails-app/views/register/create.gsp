@@ -32,11 +32,17 @@
             background-color:#337ab7;
             border-radius: 20px;
         }
+        .navbar {
+            background-color:cornflowerblue;
+        }
+        #a1,#a2,#a3 {
+            color:white;
+        }
     </style>
 </head>
 
 <body>
-<div class="container">
+
     <nav class = "navbar navbar-inverse">
         <div class = "container-fluid">
             <div class = "navbar-header">
@@ -58,6 +64,7 @@
             </div>
         </div>
     </nav>
+<div class="container">
     <div class="box">
         <g:form controller="register" name = "register" action = "save" class = "form-horizontal" >
             <div class="form-group form-group-lg">

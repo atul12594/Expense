@@ -31,14 +31,18 @@
         background-color:#337ab7;
         border-radius: 20px;
     }
+    .navbar {
+        background-color:cornflowerblue;
+    }
+    #a1,#a2,#a3 {
+        color:white;
+    }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="container">
-            <nav class = "navbar navbar-inverse">
-                <div class = "container-fluid">
+        <nav class = "navbar navbar-inverse">
+            <div class = "container-fluid">
                     <div class = "navbar-header">
                         <button type = "button" class = "navbar-toggle collapsed " data-toggle="collapse" data-target = "#navbar-collapse3">
                             <span class = "sr-only">Toggle navigation</span>
@@ -56,8 +60,9 @@
 
                         </ul>
                     </div>
-                </div>
-            </nav>
+            </div>
+        </nav>
+    <div class="container">
         <div class="box1">
             <g:form name="login" controller="login" action="test" class="form-horizontal">
                 <div class = "form-group form-group-lg ">

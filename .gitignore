@@ -1,0 +1,11 @@
+.asscache
+.classpath
+.idea/
+.project
+grailsw
+grailsw.bat
+target/
+wrapper/
+test/
+expense-grailsPlugins.iml
+expense.iml

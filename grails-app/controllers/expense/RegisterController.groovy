@@ -3,7 +3,7 @@ package expense
 class RegisterController {
 
 
-    def create() {
+    def index() {
         if(!session.uid) {
             [myuser:new Person1()]
         }
@@ -20,15 +20,15 @@ class RegisterController {
                 r1.save()
                 println r1.errors
                 if(r1.hasErrors()) {
-                    render(view: "create", model: [myuser: r1])
+                    render(view: "index", model: [myuser: r1])
                     return
                 }
-                redirect(controller:"login",action:"show")
+                redirect(controller:"login",action:"index")
             }
 
             else {
                 flash.message = "Oops! Record with this email already exist"
-                render(view: "create", model:[myuser:user])
+                render(view: "index", model:[myuser:user])
             }
 
     }

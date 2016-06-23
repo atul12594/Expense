@@ -16,20 +16,27 @@
         width: 60%;
         margin: auto;
         padding: 4%;
-        background-color:#337ab7;
+        background:linear-gradient(to right,#000000,gray);
         border-radius: 20px;
+        color:#ffffff;
     }
     .alert {
         font-size:20px;
+    }
+    .btn {
+        background-color: green;
     }
     </style>
 </head>
 
 <body>
-
+    <content tag="header">
+        <strong>Log In</strong>
+    </content>
    <content tag="mainContent">
        <g:if test="${flash.message}">
-           <div class="alert alert-error alert-danger" role="alert">${flash.message}</div>
+           <div class="alert alert-error ${flash.alertType ?'alert-success': 'alert-danger'}"
+                role="alert">${flash.message}</div>
        </g:if>
         <div class="box1">
             <g:form name="login" controller="login" action="test" class="form-horizontal">
@@ -38,7 +45,7 @@
                            style="margin-top: 10px;" >Email Id</label>
                     <div class = "col-sm-8">
                         <g:textField name= "emailid" class= "form-control" placeholder = "Enter your email"
-                                     style="padding:5px; margin:5px;" />
+                                     style="padding:5px; margin:5px;" autofocus="" />
                     </div>
                 </div>
                 <div class = "form-group form-group-lg ">

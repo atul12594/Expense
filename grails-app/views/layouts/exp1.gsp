@@ -23,12 +23,27 @@
     <asset:javascript src = "bootstrap.min.js"/>
     <asset:javascript src ="jquery.min.js"/>
     <style>
-    .navbar {
-        background-color:cornflowerblue;
-    }
-    #a1,#a2,#a3 {
-        color:white;
-    }
+        .navbar {
+            background-color:green;
+        }
+        #a1,#a2,#a3 {
+            color: white;
+        }
+        body {
+            background-color: lightyellow;
+        }
+        .box3 {
+            background-color: green;
+            color:#ffffff;
+            margin-top: 100px;
+            font-size: large;
+        }
+        #link {
+            color:#ffffff;
+        }
+        .page-header {
+            font-size: 30px;
+        }
     </style>
     <g:layoutHead/>
 </head>
@@ -44,10 +59,10 @@
                 <span class = "icon-bar"></span>
             </button>
         </div>
-        <a class="navbar-brand " id= "a1" href="#">Brand</a>
+        <a class="navbar-brand " id= "a1" href="#">Expense</a>
         <div class="collapse navbar-collapse " id="navbar-collapse3">
             <ul class="nav navbar-nav navbar-right">
-                <li ><a href="/edit/edit1" id = "a2">Edit</a></li>
+                <li ><a href="/edit/index" id = "a2">Edit</a></li>
                 <li><a href="/logout/index" id="a3">Logout</a></li>
 
             </ul>
@@ -55,8 +70,24 @@
     </div>
 </nav>
 <div class="container">
+    <div class="page-header text-center">
+        <g:pageProperty name="page.header"/>
+    </div>
     <g:pageProperty name="page.mainContent1"/>
 </div>
+<footer class="container-fluid box3 text-center">
+    <div class="row">
+        <div class="col-sm-4">
+            <p>Made by :</p>
+            <p>Atul Aggarwal</p>
+        </div>
+        <div class="col-sm-offset-4 col-sm-4">
+            <p>Mail me at :</p>
+            <p> <a href="atulaggarwal12594@gmail.com" id="link">atulaggarwal12594@gmail.com </a></p>
+        </div>
+    </div>
+
+</footer>
 <g:layoutBody/>
 </body>
 </html>

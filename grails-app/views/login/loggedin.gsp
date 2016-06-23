@@ -16,7 +16,7 @@
             width: 60%;
             margin: auto;
             padding: 4%;
-            background-color:#337ab7;
+            background:linear-gradient(to right,#000000,gray);
             border-radius: 20px;
             color:#ffffff;
             font-size: large;
@@ -26,10 +26,12 @@
 </head>
 
 <body>
+<content tag="header">
+    <strong>Welcome ${personInst.firstName}</strong>
+</content>
     <content tag="mainContent1">
         <div class="box2 text-center">
             <g:if test="${personInst}">
-                Found <br>
                 First Name : ${personInst.firstName}<br>
                 Last Name : ${personInst.lastName}
             </g:if>

@@ -1,33 +1,32 @@
 <%--
   Created by IntelliJ IDEA.
   User: atul
-  Date: 22/6/16
-  Time: 6:30 PM
+  Date: 23/6/16
+  Time: 10:06 PM
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title></title>
     <meta name="layout" content = "exp" />
 
     <style>
 
-        .box {
-            border:1px solid black ;
-            width: 70%;
-            margin: auto;
-            padding: 4%;
-            background:linear-gradient(to right,#000000,gray);
-            border-radius: 20px;
-            color:#ffffff;
-        }
-        .alert {
-            font-size:20px;
-        }
-        .btn {
-            background-color: green;
-        }
+    .box {
+        border:1px solid black ;
+        width: 70%;
+        margin: auto;
+        padding: 4%;
+        background:linear-gradient(to right,#000000,gray);
+        border-radius: 20px;
+        color:#ffffff;
+    }
+    .alert {
+        font-size:20px;
+    }
+    .btn {
+        background-color: green;
+    }
 
     </style>
 </head>
@@ -65,7 +64,7 @@
                        style="margin-top: 10px;" >Email Id</label>
                 <div class = "col-sm-8">
                     <g:textField name= "emailid" class= "form-control" placeholder = "Enter your email"
-                             style="padding:5px; margin:5px;" value="${myuser.email}" />
+                                 style="padding:5px; margin:5px;" value="${myuser.email}" />
                     <g:renderErrors bean="${myuser}" field="email"/>
                 </div>
             </div>

@@ -2,7 +2,7 @@ package expense
 
 class LoginController {
 
-    def show() {
+    def index() {
         if(!session.uid) {
 
         }
@@ -18,8 +18,8 @@ class LoginController {
             session.uid = my.id
         }
         else {
-            flash.message = "Email id or Password is incorrect"
-            render(view: "show")
+            flash.message = "Invalid Email id or Password"
+            render(view: "index")
         }
 
     }
@@ -29,7 +29,7 @@ class LoginController {
             return [personInst: my1]
         }
         else{
-            redirect(controller:"login",action: "show")
+            redirect(controller:"login",action: "index")
         }
     }
 }

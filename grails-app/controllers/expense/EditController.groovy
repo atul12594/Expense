@@ -2,18 +2,19 @@ package expense
 
 class EditController {
 
-    def edit1() {
+    def index() {
 
         if(session.uid) {
+
             Person1 result=Person1.findById(session.uid)
             render(view:"edit1",model:[res:result])
-
         }
         else {
-            redirect(controller:"login",action:"show")
+            redirect(controller:"login",action:"index")
         }
     }
     def update() {
+
         println("in update")
         println session.uid
         Person1 myperson = Person1.get(session.uid)

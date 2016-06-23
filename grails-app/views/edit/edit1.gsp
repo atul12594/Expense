@@ -32,13 +32,14 @@
 
 <content tag="mainContent1">
     <div class="box">
+
         <g:form controller = "edit" name = "edit" action = "update" class = "form-horizontal" >
             <div class="form-group form-group-lg">
                 <label for = "firstname" class = "col-sm-3 col-sm-offset-1 control-label"
                        style="margin-top: 10px;">First Name</label>
                 <div class = "col-sm-8">
                     <g:textField name= "firstname" class="form-control" placeholder = "Enter your firstname"
-                                 style="padding:5px; margin:5px;" value="${session.foo.firstName}"/>
+                                 style="padding:5px; margin:5px;" value="${res.firstName}"/>
                 </div>
             </div>
             <div class="form-group form-group-lg">
@@ -46,7 +47,7 @@
                        style="margin-top: 10px;">Last Name</label>
                 <div class="col-sm-8">
                     <g:textField name="lastname" class="form-control" placeholder="Enter your lastname"
-                                 style="padding:5px; margin:5px" value="${session.foo.lastName}" />
+                                 style="padding:5px; margin:5px" value="${res.lastName}" />
                 </div>
             </div>
             <div class = "form-group form-group-lg ">
@@ -54,7 +55,7 @@
                        style="margin-top: 10px;" >Email Id</label>
                 <div class = "col-sm-8">
                     <g:textField name= "emailid" class= "form-control" placeholder = "Enter your email"
-                                 style="padding:5px; margin:5px;" value= "${session.foo.email}" />
+                                 style="padding:5px; margin:5px;" value= "${res.email}" />
                 </div>
             </div>
             <div class="form-group form-group-lg">
@@ -63,6 +64,7 @@
                 </div>
             </div>
         </g:form>
+
     </div>
 </content>
 </body>

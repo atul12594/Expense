@@ -9,7 +9,7 @@
 <html>
 <head>
     <title></title>
-    <meta name="layout" content = "exp1" />
+    <meta name="layout" content = "exp" />
     <style>
     .box1 {
         border:1px solid black ;
@@ -19,28 +19,18 @@
         background-color:#337ab7;
         border-radius: 20px;
     }
-    .navbar {
-        background-color:cornflowerblue;
-    }
-    #a1,#a2,#a3 {
-        color:white;
-    }
-    .box2 {
-        border:1px solid black ;
-        width: 60%;
-        margin: auto;
-        padding: 4%;
-        background-color:#337ab7;
-        border-radius: 20px;
-        color:#ffffff;
-        font-size: large;
+    .alert {
+        font-size:20px;
     }
     </style>
 </head>
 
 <body>
 
-   <content tag="mainContent1">
+   <content tag="mainContent">
+       <g:if test="${flash.message}">
+           <div class="alert alert-error alert-danger" role="alert">${flash.message}</div>
+       </g:if>
         <div class="box1">
             <g:form name="login" controller="login" action="test" class="form-horizontal">
                 <div class = "form-group form-group-lg ">
@@ -67,13 +57,7 @@
             </g:form>
         </div>
 
-            <div class="box2 text-center">
-                <g:if test="${personInst}">
-                    Found <br>
-                    First Name : ${personInst.firstName}<br>
-                    Last Name :${personInst.lastName}
-                </g:if>
-            </div>
+
 
    </content>
 </body>

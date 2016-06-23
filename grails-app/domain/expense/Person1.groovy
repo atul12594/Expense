@@ -4,8 +4,10 @@ class Person1 {
     String firstName
     String lastName
     String email
-    int password
+    String password
 
     static constraints = {
+        email(email:true, unique: true)
+
     }
 }

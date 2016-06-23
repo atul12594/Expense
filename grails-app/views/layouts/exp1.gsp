@@ -22,6 +22,14 @@
     <asset:stylesheet src = "bootstrap.min.css"/>
     <asset:javascript src = "bootstrap.min.js"/>
     <asset:javascript src ="jquery.min.js"/>
+    <style>
+    .navbar {
+        background-color:cornflowerblue;
+    }
+    #a1,#a2,#a3 {
+        color:white;
+    }
+    </style>
     <g:layoutHead/>
 </head>
 
@@ -40,7 +48,7 @@
         <div class="collapse navbar-collapse " id="navbar-collapse3">
             <ul class="nav navbar-nav navbar-right">
                 <li ><a href="/edit/edit1" id = "a2">Edit</a></li>
-                <li><a href="#" id="a3">Logout</a></li>
+                <li><a href="/logout/index" id="a3">Logout</a></li>
 
             </ul>
         </div>

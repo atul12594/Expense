@@ -3,17 +3,26 @@ package expense
 class EditController {
 
     def edit1() {
-        println ("got in edit1")
-        println session.foo
-        return[session.foo]
+
+        if(session.uid) {
+            Person1 result=Person1.findById(session.uid)
+            render(view:"edit1",model:[res:result])
+
+        }
+        else {
+            redirect(controller:"login",action:"show")
+        }
     }
     def update() {
-        Person1 myperson = Person1.get(params.id)
+        println("in update")
+        println session.uid
+        Person1 myperson = Person1.get(session.uid)
 
         myperson.firstName = params.firstname
         myperson.lastName = params.lastname
         myperson.email = params.emailid
         myperson.save()
+        redirect(controller:"login",action:"loggedin")
     }
 
 }

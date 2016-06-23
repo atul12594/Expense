@@ -21,12 +21,10 @@
             background-color:#337ab7;
             border-radius: 20px;
         }
-        .navbar {
-            background-color:cornflowerblue;
+        .alert {
+            font-size:20px;
         }
-        #a1,#a2,#a3 {
-            color:white;
-        }
+
     </style>
 </head>
 
@@ -34,6 +32,9 @@
 
 <content tag="mainContent">
 
+    <g:if test="${flash.message}">
+        <div class="alert alert-error alert-danger" role="alert">${flash.message}</div>
+    </g:if>
     <div class="box">
         <g:form controller="register" name = "register" action = "save" class = "form-horizontal" >
             <div class="form-group form-group-lg">
@@ -41,30 +42,30 @@
                        style="margin-top: 10px;">First Name</label>
                 <div class = "col-sm-8">
                     <g:textField name= "firstName" class="form-control" placeholder = "Enter your firstname"
-                                 style="padding:5px; margin:5px;" />
+                                 style="padding:5px; margin:5px;" value="${myuser.firstName}"/>
                 </div>
             </div>
             <div class="form-group form-group-lg">
                 <label for = "lastName" class="col-sm-3 col-sm-offset-1 control-label"  style="margin-top: 10px;">Last Name</label>
                 <div class="col-sm-8">
                     <g:textField name="lastName" class="form-control" placeholder="Enter your lastname"
-                                 style="padding:5px; margin:5px"/>
+                                 style="padding:5px; margin:5px" value="${myuser.lastName}"/>
                 </div>
             </div>
-            <div class = "form-group form-group-lg ">
+            <div class = "form-group form-group-lg  ${hasErrors(bean : myuser ,field :'email', 'has-error')}">
                 <label for = "emailid" class = "col-sm-3 col-sm-offset-1 control-label"
                        style="margin-top: 10px;" >Email Id</label>
                 <div class = "col-sm-8">
                     <g:textField name= "emailid" class= "form-control" placeholder = "Enter your email"
-                             style="padding:5px; margin:5px;" />
+                             style="padding:5px; margin:5px;" value="${myuser.email}" />
+                    <g:renderErrors bean="${myuser}" field="email"/>
                 </div>
             </div>
             <div class = "form-group form-group-lg ">
                 <label for = "password" class = "col-sm-3 col-sm-offset-1 control-label"
                        style="margin-top: 10px;" >Password</label>
                 <div class = "col-sm-8">
-                    <g:passwordField name= "password" class= "form-control" placeholder = "Enter your password"
-                                 style="padding:5px; margin:5px;" />
+                    <g:passwordField name= "password" class= "form-control" placeholder = "Enter your password" style="padding:5px; margin:5px;" value="${myuser.password}"/>
                 </div>
             </div>
             <div class="form-group form-group-lg">
@@ -73,6 +74,7 @@
                 </div>
             </div>
         </g:form>
+
     </div>
 
 </content>

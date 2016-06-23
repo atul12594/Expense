@@ -12,6 +12,6 @@
 </head>
 
 <body>
-        FIRST NAME :
+        <p>Successfully Registered</p>
 </body>
 </html>
